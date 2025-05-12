@@ -1,5 +1,197 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  position: relative;
+  min-inline-size: 100%;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.highlighted-link {
+  position: relative;
+  display: inline;
+  text-shadow: 2px 2px 0 var(--accent-color);
+  color: inherit; 
+  text-decoration: none;
+}
+
+.highlighted-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px; 
+  width: 100%;
+  height: 1px;
+  background-color: currentColor; 
+  box-shadow: none;
+}
+
+.highlighted-link:focus {
+  border: 0.5px currentColor solid;
+}
+
+.highlighted-link:focus-visible {
+  border: 0.5px currentColor solid;
+  outline: none;
+}
+
+.header {
+  display: grid;
+  position: relative;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.header__theme-menu {
+  display: flex;
+}
+
+.header__theme-menu-item {
+  min-inline-size: 70px;
+  min-block-size: 26px;
+}
+
+.header__theme-menu-button {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: lowercase;
+  min-inline-size: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 0.5px solid currentColor;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  text-decoration: underline;
+}
+
+.header__theme-menu-button:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+.header__theme-menu-button:active {
+  text-decoration: none;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid currentColor;
+}
+
+.heading {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: bold;
+  line-height: 82.5%;
+  color: var(--main-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.heading-description__container {
+  display: flex;
+}
+
+.heading-description {  
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--secondary-color);
+}
+
+.title-decor { 
+  background-color: var(--accent-color);
+}
+
+.main {
+  box-sizing: content-box;
+}
+
+.fact-section__heading {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23.4px;
+  padding-bottom: 20px;
+}
+
+.fact-section {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+
+.fact-section__card {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+
+.fact-section__card-heading {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--secondary-color);
+}
+
+.fact-section__card-sub-heading {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--secondary-color);
+}
+
+.fact-section__card-description {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.gallery {
+  display: grid;
+}
+
+.gallery__heading {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--secondary-color);
+}
+
+.gallery__item {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.gallery__pictures {
+  display: grid;
+}
+
+.footer {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  inline-size: 100%;
 }
