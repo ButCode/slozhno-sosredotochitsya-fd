@@ -107,6 +107,7 @@
   }
 
   .fact-section {
+    display: grid;
     padding-bottom: 50px;
   }
 
@@ -162,7 +163,7 @@
   .fact-section-aside {
     display: grid;
     grid-template-columns: 1fr 2fr;
-  }
+   }
 
   .fact-section__heading:not(:first-child) {
     padding-top: 30px;
@@ -237,6 +238,11 @@
     max-block-size: 3682px;
   }
 
+  .fact-section {
+    display: grid;
+    gap: 10px;
+  }
+
   .fact-section-padding {
     padding-left: 13px;
   }
@@ -288,8 +294,12 @@
   .main {
     max-block-size: 3353px;
   }
+  
+  .fact-section {
+    display: grid;
+  }
 
-  .fact-section:nth-of-type(2) {
+  .column-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }

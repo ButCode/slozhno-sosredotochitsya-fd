@@ -133,8 +133,6 @@
 }
 
 .fact-section {
-  display: flex;
-  flex-flow: column;
   gap: 20px;
   padding-bottom: 50px;
 }
