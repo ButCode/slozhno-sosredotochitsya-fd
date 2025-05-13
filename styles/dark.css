@@ -10,7 +10,7 @@
 }
 
 .theme-dark .decorated-zone::before {
-  border-top: 1px solid var(--accent-color); 
+  border-top: 1px solid var(--accent-color);
   border-right: 1px solid var(--accent-color);
 }
 

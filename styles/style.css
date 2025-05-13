@@ -2,6 +2,7 @@
 .page {
   position: relative;
   min-inline-size: 100%;
+  background-attachment: fixed
 }
 
 .decorated-zone::before {
@@ -22,7 +23,7 @@
   position: relative;
   display: inline;
   text-shadow: 2px 2px 0 var(--accent-color);
-  color: inherit; 
+  color: inherit;
   text-decoration: none;
 }
 
@@ -30,10 +31,10 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -1px; 
+  bottom: -1px;
   width: 100%;
   height: 1px;
-  background-color: currentColor; 
+  background-color: currentColor;
   box-shadow: none;
 }
 
@@ -107,7 +108,7 @@
   display: flex;
 }
 
-.heading-description {  
+.heading-description {
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -115,7 +116,7 @@
   color: var(--secondary-color);
 }
 
-.title-decor { 
+.title-decor {
   background-color: var(--accent-color);
 }
 

@@ -1,4 +1,4 @@
-:root { 
+:root {
   --main-color: #DB00FF;
   --secondary-color: #000028;
   --tertiary-color: #F1B2CE;
@@ -11,7 +11,7 @@
   }
 
   .decorated-zone::before {
-    border-top: 1px solid var(--accent-color); 
+    border-top: 1px solid var(--accent-color);
     border-right: 1px solid var(--accent-color);
   }
   
@@ -48,7 +48,7 @@
     content: "";
     position: absolute;
     right: clamp(16px, 3.5vw, 26px);
-    top: clamp(15px, 3.5vw, 25px);;
+    top: clamp(15px, 3.5vw, 25px);
     width: 15px;
     height: 15px;
     background: radial-gradient(circle, var(--accent-color) 0%, transparent);
@@ -273,8 +273,7 @@
   .header__theme-menu-list {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    inline-size: 22.46vw;;
+    inline-size: 22.46vw;
     align-items: space-between;
   }
 

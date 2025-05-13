@@ -10,12 +10,12 @@
 }
 
 .theme-light .decorated-zone::before {
-  border-top: 1px solid var(--secondary-color); 
+  border-top: 1px solid var(--secondary-color);
   border-right: 1px solid var(--secondary-color);
 }
 
 .theme-light .decorated-zone::after {
-  border-bottom: 1px solid var(--secondary-color); 
+  border-bottom: 1px solid var(--secondary-color);
   border-left: 1px solid var(--secondary-color);
 }
 
@@ -86,12 +86,12 @@
     }
 
     .decorated-zone::before {
-      border-top: 1px solid var(--secondary-color); 
+      border-top: 1px solid var(--secondary-color);
       border-right: 1px solid var(--secondary-color);
     }
     
     .decorated-zone::after {
-      border-bottom: 1px solid var(--secondary-color); 
+      border-bottom: 1px solid var(--secondary-color);
       border-left: 1px solid var(--secondary-color);
     }
 }
