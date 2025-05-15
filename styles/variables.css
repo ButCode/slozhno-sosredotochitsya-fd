@@ -20,7 +20,7 @@
     font-family: 'IBM Plex mono', sans-serif;
     font-weight: normal;
     font-display: swap;
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 25px;
     text-transform: uppercase;
     color: var(--accent-color);
