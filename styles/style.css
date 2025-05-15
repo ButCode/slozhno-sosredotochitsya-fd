@@ -1,7 +1,7 @@
-
 .page {
   position: relative;
   min-inline-size: 100%;
+  background-color: var(--background-color);
   background-attachment: fixed
 }
 
@@ -10,6 +10,8 @@
   position: absolute;
   width: 25px;
   height: 25px;
+  border-top: 1px solid;
+  border-right: 1px solid;
 }
 
 .decorated-zone::after {
@@ -17,6 +19,8 @@
   position: absolute;
   width: 25px;
   height: 25px;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
 }
 
 .highlighted-link {
@@ -25,6 +29,7 @@
   text-shadow: 2px 2px 0 var(--accent-color);
   color: inherit;
   text-decoration: none;
+  border: 0.5px solid transparent;
 }
 
 .highlighted-link:hover::after {
@@ -38,19 +43,21 @@
   box-shadow: none;
 }
 
-.highlighted-link:focus {
-  border: 0.5px currentColor solid;
-}
-
+.highlighted-link:focus,
 .highlighted-link:focus-visible {
-  border: 0.5px currentColor solid;
+  border: 0.5px solid currentColor;
   outline: none;
 }
 
 .header {
   display: grid;
   position: relative;
+  justify-content: center;
   grid-template-rows: 1fr 1fr 1fr;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .header__theme-menu {
@@ -69,21 +76,19 @@
   line-height: 18px;
   text-transform: lowercase;
   min-inline-size: 100%;
+  box-sizing: border-box;
   background-color: transparent;
-  border: none;
+  border: 0.5px solid transparent;
 }
 
 .header__theme-menu-button:hover {
-  border: 0.5px solid currentColor;
+  border-color: currentColor;
   cursor: pointer;
 }
 
-.header__theme-menu-button:focus {
-  text-decoration: underline;
-}
-
+.header__theme-menu-button:focus,
 .header__theme-menu-button:focus-visible {
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
   outline: none;
 }
 
@@ -100,12 +105,8 @@
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: bold;
   line-height: 82.5%;
-  color: var(--main-color);
+  color: var(--main-title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
-}
-
-.heading-description__container {
-  display: flex;
 }
 
 .heading-description {
@@ -113,7 +114,6 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--secondary-color);
 }
 
 .title-decor {
@@ -124,7 +124,7 @@
   box-sizing: content-box;
 }
 
-.fact-section__heading {
+.section__heading {
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -132,18 +132,18 @@
   padding-bottom: 20px;
 }
 
-.fact-section {
+.section {
   gap: 20px;
   padding-bottom: 50px;
 }
 
-.fact-section__card {
+.article__card {
   display: flex;
   flex-flow: column;
   gap: 10px;
 }
 
-.fact-section__card-heading {
+.article__card-heading {
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -151,7 +151,7 @@
   color: var(--secondary-color);
 }
 
-.fact-section__card-sub-heading {
+.article__card-sub-heading {
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: normal;
   font-size: 18px;
@@ -159,9 +159,10 @@
   color: var(--secondary-color);
 }
 
-.fact-section__card-description {
+.article__card-description {
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: normal;
+  color: var(--text-color);
   font-size: 18px;
   line-height: 23.4px;
 }
@@ -188,9 +189,8 @@
 }
 
 .footer {
-  display: grid;
+  display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
-  inline-size: 100%;
 }

@@ -1,97 +1,40 @@
 :root.theme-light {
-  --main-color: #FFC2E6;
-  --secondary-color: #353430;
-  --tertiary-color: #FFF1F7;
+  --main-title-color: #FFC2E6;
+  --text-color: #353430;
+  --background-color: #FFF1F7;
   --accent-color: #FF8DCB;
+  --background-image: url(../images/cover-image-light.png);
 }
 
-.theme-light .page {
-  background-color: var(--tertiary-color, #FFF1F7);
-}
-
-.theme-light .decorated-zone::before {
-  border-top: 1px solid var(--secondary-color);
-  border-right: 1px solid var(--secondary-color);
-}
-
+.theme-light .decorated-zone::before,
 .theme-light .decorated-zone::after {
-  border-bottom: 1px solid var(--secondary-color);
-  border-left: 1px solid var(--secondary-color);
-}
-
-.theme-light .header {
-  background-image: url(../images/cover-image-light.png);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.theme-light .header__dark-theme-decoration__text {
-  position: absolute;
-  visibility: hidden;
-}
-
-.theme-light .header__dark-theme-decoration__ellipse {
-  position: absolute;
-  visibility: hidden;
+  border-color: var(--text-color);
 }
 
 .theme-light .header__theme-menu-button {
-  color: var(--secondary-color);
+  color: var(--text-color);
 }
 
-.theme-light .fact-section__heading {
-  color: var(--secondary-color);
+.theme-light .header__dark-theme-decoration,
+.theme-light .header__dark-theme-decoration::after {
+  position: absolute;
+  visibility: hidden;
 }
 
-.theme-light .fact-section__card-description {
-  color: var(--secondary-color);
+.theme-light .heading-description,
+.theme-light .section__heading,
+.theme-light .article__card-heading,
+.theme-light .article__card-sub-heading,
+.theme-light .gallery__heading {
+  color: var(--text-color);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --main-color: #FFC2E6;
-    --secondary-color: #353430;
-    --tertiary-color: #353430;
-    --accent-color: #FF8DCB;
+    --main-title-color: #FFC2E6;
+    --text-color: #353430;
     --background-color: #FFF1F7;
+    --accent-color: #FF8DCB;
+    --background-image: url(../images/cover-image-light.png);
   }
-    .page {
-      background-color: var(--background-color, #FFF1F7);
-    }
-    
-    .header {
-      background-image: url(../images/cover-image-light.png);
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-    
-    .header__dark-theme-decoration__text {
-      position: absolute;
-      visibility: hidden;
-    }
-    
-    .header__dark-theme-decoration__ellipse {
-      position: absolute;
-      visibility: hidden;
-    }
-
-    .header__theme-menu-button {
-      color: var(--secondary-color);
-    }
-
-    .fact-section__heading {
-      color: var(--secondary-color);
-    }
-
-    .decorated-zone::before {
-      border-top: 1px solid var(--secondary-color);
-      border-right: 1px solid var(--secondary-color);
-    }
-    
-    .decorated-zone::after {
-      border-bottom: 1px solid var(--secondary-color);
-      border-left: 1px solid var(--secondary-color);
-    }
 }

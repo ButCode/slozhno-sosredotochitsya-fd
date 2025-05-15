@@ -1,40 +1,22 @@
 :root {
-  --main-color: #DB00FF;
-  --secondary-color: #000028;
-  --tertiary-color: #F1B2CE;
+  --main-title-color: #DB00FF;
+  --text-color: #F1B2CE;
+  --heading-color: #000028;
+  --background-color: #000028;
   --accent-color: #FF0070;
-  }
+  --background-image: url(../images/cover-image-dark.png);
 
-  .page {
-    position: relative;
-    background-color: var(--secondary-color, #000028);
-  }
-
-  .decorated-zone::before {
-    border-top: 1px solid var(--accent-color);
-    border-right: 1px solid var(--accent-color);
-  }
-  
+  .decorated-zone::before,
   .decorated-zone::after {
-    border-bottom: 1px solid var(--accent-color);
-    border-left: 1px solid var(--accent-color);
-  }
-
-  .header {
-    background-image: url(../images/cover-image-dark.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    border-color: var(--accent-color);
   }
 
   .header__theme-menu-button {
     color: var(--accent-color);
   }
 
-  .header__dark-theme-decoration__text {
+  .header__dark-theme-decoration {
     position: absolute;
-    right: clamp(38px, 6.3vw, 48px);
-    top: clamp(10px, 3vw, 20px);
     font-family: 'IBM Plex mono', sans-serif;
     font-weight: normal;
     font-display: swap;
@@ -44,24 +26,26 @@
     color: var(--accent-color);
   }
 
-  .header__dark-theme-decoration__ellipse {
+  .header__dark-theme-decoration::after {
     content: "";
     position: absolute;
-    right: clamp(16px, 3.5vw, 26px);
-    top: clamp(15px, 3.5vw, 25px);
     width: 15px;
     height: 15px;
     background: radial-gradient(circle, var(--accent-color) 0%, transparent);
     border-radius: 50%;
   }
 
-  .fact-section__heading {
-    color: var(--accent-color);
+  .heading-description,
+  .article__card-heading,
+  .article__card-sub-heading,
+  .gallery__heading {
+    color: var(--heading-color);
   }
 
-  .fact-section__card-description {
-    color: var(--tertiary-color);
+  .section__heading {
+    color: var(--accent-color);
   }
+}
 
 @media (max-width: 767px) {
   .decorated-zone::before {
@@ -72,6 +56,16 @@
   .decorated-zone::after {
     left: 10px;
     bottom: 10px;
+  }
+
+  .header__dark-theme-decoration {
+    top: 10px;
+    right: 38px;
+  }
+
+  .header__dark-theme-decoration::after {
+    left: 39px;
+    top: 5px;
   }
 
   .header {
@@ -97,16 +91,15 @@
     padding: 30px 10px 30px 10px;
   }
 
-  .heading-description__container {
-    padding: 25px 10px 66px 10px;
+  .heading-description {
+    margin: 25px 10px 66px 10px;
   }
 
   .main {
-    max-block-size: 5355px;
     padding: 40px 10px 40px 10px;
   }
 
-  .fact-section {
+  .section {
     display: grid;
     padding-bottom: 50px;
   }
@@ -119,7 +112,6 @@
   .gallery__pictures {
     grid-template-columns: 1fr;
     gap: 10px;
-    max-height: 1366px;
   }
 
   .gallery__item {
@@ -136,9 +128,6 @@
     min-block-size: 668px;
   }
   
-  .footer > .heading {
-    padding: 0;
-  }
 }
 
 @media (min-width: 768px) {
@@ -152,6 +141,16 @@
     bottom: 20px;
   }
 
+  .header__dark-theme-decoration {
+    top: 20px;
+    right: 48px;
+  }
+
+  .header__dark-theme-decoration::after {
+    left: 39px;
+    top: 5px;
+  }
+
   .heading {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   }
@@ -160,12 +159,12 @@
     padding: 60px 20px 60px 20px;
   }
 
-  .fact-section-aside {
+  .section-aside {
     display: grid;
     grid-template-columns: 1fr 2fr;
    }
 
-  .fact-section__heading:not(:first-child) {
+  .section__heading:not(:first-child) {
     padding-top: 30px;
     padding-right: 70%;
   }
@@ -230,28 +229,24 @@
     align-self: center;
   }
 
-  .heading-description__container {
-    padding: 41px 20px 183px 384px;
+  .heading-description {
+    margin: 41px 20px 183px 384px;
   }
 
-  .main {
-    max-block-size: 3682px;
-  }
-
-  .fact-section {
+  .section {
     display: grid;
     gap: 10px;
   }
 
-  .fact-section-padding {
+  .section-padding {
     padding-left: 13px;
   }
 
-  .fact-section-aside:not(:first-child) {
+  .section-aside:not(:first-child) {
     padding-top: 30px;
   }
 
-  .fact-section__heading-padding {
+  .section__heading-padding {
     padding-right: 10px;
   }
 
@@ -287,15 +282,11 @@
     align-self: center;
   }
 
-  .heading-description__container {
-    padding: 51px 20px 134px 513px;
-  }
-
-  .main {
-    max-block-size: 3353px;
+  .heading-description {
+    margin: 51px 20px 134px 513px;
   }
   
-  .fact-section {
+  .section {
     display: grid;
   }
 
@@ -304,11 +295,11 @@
     grid-template-columns: repeat(3, 1fr);
   }
   
-  .fact-section-padding {
+  .section-padding {
     padding-left: 7px;
   }
 
-  .fact-section-aside:not(:first-child) {
+  .section-aside:not(:first-child) {
     padding-top: 30px;
   }
 

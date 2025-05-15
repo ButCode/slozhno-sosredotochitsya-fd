@@ -1,47 +1,32 @@
 :root.theme-dark {
-  --main-color: #DB00FF;
-  --secondary-color: #000028;
-  --tertiary-color: #F1B2CE;
+  --main-title-color: #DB00FF;
+  --text-color: #F1B2CE;
+  --heading-color: #000028;
+  --background-color: #000028;
   --accent-color: #FF0070;
+  --background-image: url(../images/cover-image-dark.png);
 }
 
-.theme-dark .page {
-  background-color: var(--secondary-color, #000028);
-}
-
-.theme-dark .decorated-zone::before {
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
-}
-
+.theme-dark .decorated-zone::before,
 .theme-dark .decorated-zone::after {
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
-}
-
-.theme-dark .header {
-  background-image: url(../images/cover-image-dark.png);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  border-color: var(--accent-color);
 }
 
 .theme-dark .header__theme-menu-button {
   color: var(--accent-color);
 }
 
-.theme-dark .header__dark-theme-decoration__text {
+.theme-dark .header__dark-theme-decoration {
   position: absolute;
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: normal;
-  font-display: swap;
   font-size: 18px;
   line-height: 25px;
   text-transform: uppercase;
   color: var(--accent-color);
 }
 
-.theme-dark .header__dark-theme-decoration__ellipse {
+.theme-dark .header__dark-theme-decoration::after {
   content: "";
   position: absolute;
   width: 15px;
@@ -50,11 +35,14 @@
   border-radius: 50%;
 }
 
-.theme-dark .fact-section__heading {
-  color: var(--accent-color);
+.theme-dark .heading-description,
+.theme-dark .article__card-heading,
+.theme-dark .article__card-sub-heading,
+.theme-dark .gallery__heading {
+  color: var(--heading-color);
 }
 
-.theme-dark .fact-section__card-description {
-  color: var(--tertiary-color);
+.theme-dark .section__heading {
+  color: var(--accent-color);
 }
 
