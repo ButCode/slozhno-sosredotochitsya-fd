@@ -1,7 +1,7 @@
 .page {
   position: relative;
   min-inline-size: 100%;
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
   background-attachment: fixed
 }
 
@@ -12,6 +12,7 @@
   height: 25px;
   border-top: 1px solid;
   border-right: 1px solid;
+  border-color: var(--decor-color);
 }
 
 .decorated-zone::after {
@@ -21,6 +22,7 @@
   height: 25px;
   border-bottom: 1px solid;
   border-left: 1px solid;
+  border-color: var(--decor-color);
 }
 
 .highlighted-link {
@@ -52,9 +54,12 @@
 .header {
   display: grid;
   position: relative;
+  height: 100vh;
+  min-height: 644px;
   justify-content: center;
+  align-items: flex-start;
   grid-template-rows: 1fr 1fr 1fr;
-  background-image: var(--background-image);
+  background-image: var(--bg-image);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -75,6 +80,7 @@
   font-size: 1.125em;
   line-height: 1.125em;
   text-transform: lowercase;
+  color: var(--button-color);
   min-inline-size: 100%;
   box-sizing: border-box;
   background-color: transparent;
@@ -105,7 +111,7 @@
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: bold;
   line-height: 82.5%;
-  color: var(--main-title-color);
+  color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
@@ -114,6 +120,7 @@
   font-weight: bold;
   font-size: 1.125em;
   line-height: 23.4px;
+  color: var(--highlighted-heading-color);
 }
 
 .title-decor {
@@ -129,7 +136,7 @@
   font-weight: bold;
   font-size: 1.125em;
   line-height: 23.4px;
-  padding-bottom: 20px;
+  color: var(--heading-color);
 }
 
 .section {
@@ -148,7 +155,7 @@
   font-weight: bold;
   font-size: 1.125em;
   line-height: 23.4px;
-  color: var(--secondary-color);
+  color: var(--highlighted-heading-color);
 }
 
 .article__card-sub-heading {
@@ -156,15 +163,24 @@
   font-weight: normal;
   font-size: 1.125em;
   line-height: 23.4px;
-  color: var(--secondary-color);
+  color: var(--highlighted-heading-color);
 }
 
 .article__card-description {
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: normal;
-  color: var(--text-color);
   font-size: 1.125em;
   line-height: 23.4px;
+  color: var(--text-color);
+}
+
+.section-aside {
+  display: grid;
+}
+
+.section-together {
+  display: grid;
+  gap: 20px;
 }
 
 .gallery {
@@ -176,7 +192,7 @@
   font-weight: bold;
   font-size: 1.125em;
   line-height: 23.4px;
-  color: var(--secondary-color);
+  color: var(--highlighted-heading-color);
 }
 
 .gallery__item {
