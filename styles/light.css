@@ -1,3 +1,4 @@
+/* Переменнные светлой темы */
 :root.theme-light {
   --title-color: #FFC2E6;
   --accent-color: #FF8DCB;
@@ -10,11 +11,13 @@
   --bg-image: url(../images/cover-image-light.png);
 }
 
+/* Декоративный  элемент шапки */
 .theme-light .header__dark-theme-decoration,
 .theme-light .header__dark-theme-decoration::after {
   display: none;
 }
 
+/* Адаптивность под ОС */
 @media (prefers-color-scheme: light) {
   :root {
     --title-color: #FFC2E6;

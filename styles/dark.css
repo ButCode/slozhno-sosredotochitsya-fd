@@ -1,3 +1,4 @@
+/* Переменные темной темы */
 :root.theme-dark {
   --title-color: #DB00FF;
   --accent-color: #FF0070;
@@ -10,6 +11,7 @@
   --bg-image: url(../images/cover-image-dark.png);
 }
 
+/* Декорантивный элемент шапки */
 .header__dark-theme-decoration {
   position: absolute;
   font-family: 'IBM Plex mono', sans-serif;
